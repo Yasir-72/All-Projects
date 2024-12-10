@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e9e4e4;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 415px;
+  height: 350px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.card p {
+  font-size: 24px;
+}
+.line {
+  width: 100%;
+  height: 3px;
+  background-color: #fcb600;
+  margin: 60px 0 10px;
+}
+.card-name {
+  display: flex;
+}
+.card-name p {
+  color: #fcb600;
+  margin-left: 15px;
+}
+.card-Profile img {
+  width: 100px;
+  height: 65px;
+}
+.content-box {
+  width: 85%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.box1 {
+  width: 350px;
+  height: 300px;
+  background-color: black;
+  border-radius: 30px;
+}
+
+.box2 {
+  width: 75%;
+  height: 300px;
+  background-color: white;
+  border-radius: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  top: 160px;
+  box-shadow: 8px 4px 103px 16px black;
+}
+.box3 {
+  width: 350px;
+  height: 300px;
+  position: relative;
+  background-color: #fcb600;
+  border-radius: 30px;
+  top: 270px;
+}
+.content {
+  width: 90%;
+  height: 250px;
+  margin-inline: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.box2 h1 {
+  color: #fcb600;
+}
+.box2 h2 {
+  font-size: larger;
+}
+.content-register {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.content-register h3 {
+  width: 50%;
+  color: #fcb600;
+  margin-top: 28px;
+  font-size: medium;
+}
+.content-register button {
+  position: relative;
+  width: 270px;
+  height: 50px;
+  color: #fcb600;
+  background-color: transparent;
+  border: none;
+  padding: 5px 30px;
+  top: 25px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.content-register button:hover {
+  background-color: #fcb600;
+  border-radius: 30px;
+  color: white;
+  transition: 0.5s ease;
+}

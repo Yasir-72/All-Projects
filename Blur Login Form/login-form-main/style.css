@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background: url(background.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+header {
+  display: flex;
+  padding: 20px 70px;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+}
+.logo {
+  font-size: 2em;
+  color: black;
+  user-select: none;
+  margin-right: auto;
+}
+.navigation a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.3em;
+  color: black;
+  margin-left: 60px;
+}
+
+.navigation a::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: -7px;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+.navigation a:hover::after {
+  transform: scaleX(1);
+}
+.loginbtn {
+  width: 130px;
+  height: 50px;
+  color: black;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 2px solid black;
+  font-size: 1.4em;
+  padding: 10px;
+  margin-left: 40px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: 400;
+  margin-left: 60px;
+}
+.loginbtn:hover {
+  background-color: black;
+  color: white;
+  transition: 0.4s;
+}
+.loginbox {
+  position: fixed;
+  left: 550px;
+  margin-top: 70px;
+  width: 370px;
+  height: 430px;
+  border-radius: 10px;
+  border: 2px solid #488aaa;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  transition: height 0.2s ease;
+  overflow: hidden;
+}
+.loginbox.active {
+  height: 470px;
+}
+.loginbox.active .loginform {
+  transition: none;
+  transform: translateX(-400px);
+}
+.loginform {
+  width: 100%;
+  padding: 45px;
+  transition: transform 0.18s ease;
+}
+.loginbox .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  color: white;
+  font-size: 1.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+}
+#login-name {
+  position: fixed;
+  top: 25px;
+  left: 140px;
+  pointer-events: none;
+}
+.inputbox {
+  position: relative;
+  height: 35px;
+  width: 100%;
+  border-bottom: 3px solid black;
+  margin: 35px 0;
+}
+.inputbox label {
+  position: absolute;
+  bottom: 0;
+  left: 5px;
+  transform: translateY(-50%);
+  font-size: 1.1em;
+  pointer-events: none;
+  color: white;
+  font-weight: 800;
+}
+.inputbox input:focus ~ label {
+  top: -5px;
+}
+
+.inputbox input {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1.1em;
+  padding: 0 35px 0 5px;
+}
+.inputbox .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.3em;
+  color: black;
+}
+.remember-forgot {
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.remember-forgot label input {
+  margin-right: 3px;
+}
+.remember-forgot label {
+  color: white;
+}
+.remember-forgot a {
+  text-decoration: none;
+  color: white;
+}
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+.lgnbtn {
+  height: 35px;
+  width: 100%;
+  margin: 15px 0;
+  background-color: black;
+  color: white;
+  border-radius: 7px;
+  border: 2px solid black;
+  font-weight: bold;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+.lgnRegister p {
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+  margin-right: 47px;
+}
+.lgnRegister p a {
+  text-decoration: none;
+  color: white;
+  font-weight: 800;
+}
+.lgnRegister p a:hover {
+  text-decoration: underline;
+}
+.registerform {
+  position: absolute;
+  transform: translateX(400px); /* Initially off-screen */
+  width: 100%;
+  padding: 45px;
+  transition: transform 0.18s ease;
+}
+
+.loginbox.active .registerform {
+  transform: translateX(0);
+}
